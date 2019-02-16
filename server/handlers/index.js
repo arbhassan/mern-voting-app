@@ -4,7 +4,7 @@ module.exports.notFound = (req, res, next) => {
   next(err);
 };
 
-module.exports.errorHandle = (err, req, res, next) => {
+module.exports.errors = (err, req, res, next) => {
   res
     .status(err.status || 500)
     .json({ err: err.message || "Something went wrong" });
